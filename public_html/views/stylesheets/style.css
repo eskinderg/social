@@ -1,0 +1,543 @@
+html
+{
+    background:url('../../image/background-body.png');
+    overflow-y: scroll;
+    height: 100%;
+}
+*
+{
+    margin: 0px;
+    padding:0px;
+    outline: 0px;
+}
+
+
+body
+{
+     font-family: Helvetica,Arial,'lucida grande',tahoma,verdana,arial,sans-serif;
+     //background-color: lightgray;  
+     color: rgb(76, 81, 92);
+     width:980px;
+     margin: auto;
+     height:100%;
+
+ 
+}
+
+
+
+input[type=button],input[type=submit], button
+{
+    border:1px solid darkgrey;
+    padding:9px;
+    cursor: pointer;
+    background-color: lightgrey;
+    
+}
+input[type=button]:hover,input[type=submit]:hover, button:hover
+{
+    background-color: white;
+}
+
+
+
+
+
+input[type=password],input[type=text]
+{
+    border:2px solid rgb(208, 210, 219);
+    padding: 4px;
+    color: rgb(103, 132, 141);
+}
+
+
+a,a:visited
+{
+    color:white;
+    text-decoration: none;
+}
+
+
+
+h1
+{
+    margin:0px;
+}
+
+#header{
+    width:100%;
+    background-color: rgba(109, 114, 126, 0.64);
+   
+    
+}
+
+
+#header #main-title
+{
+     color:white;
+     margin-left:4px;
+     
+}
+
+#links
+{
+    float:right;
+    //line-height: 35px;
+    margin-right: 5px;
+    margin-top:3px;
+    
+}
+
+#menu
+{
+    width: 980px;
+    background-color: rgba(109, 114, 126, 0.64);
+    height:40px;
+    line-height: 38px;
+   
+}
+#menu li
+{
+   
+    float: left;
+    margin-right: 8px;
+    margin-left: 6px;
+    list-style-type: none;
+   
+}
+
+
+
+#profile_menu
+{
+    //width:980px;
+    position: relative;
+    background-color: rgba(135, 135, 135, 0.36);
+    height:30px;
+    line-height: 30px;
+}
+
+#profile_menu li
+{
+    
+    //display: block;
+    list-style-type: none;
+    float:left;
+    margin-right: 6px;
+    margin-left: 4px;
+}
+
+
+#login input[type='text'], #login input[type='password']
+{
+    text-align: center;
+    font-family: arial;
+    width:230px;
+    height:25px;
+    padding-left: 7px;
+    font-size: 18px;
+    
+    
+}
+
+
+
+#mainlogin input[type='text'], #mainlogin input[type='password']
+{
+    width:225px;
+    height:23px;
+    padding-left:5px;
+    font-size: 15px;
+    color:grey;
+   
+    
+}
+#mainlogin
+{
+    margin-top:30px;
+    float:left;
+    margin-left:25px;
+    //border:1px solid black;
+}
+
+
+#footer
+{
+    
+    display: block;
+    font-size: 11px;
+    color:grey;
+    height: auto;
+    width:100%;
+    background-color: rgba(128, 128, 128, 0.11);
+    border: 1px solid #CCC;
+    
+}
+
+#content
+{
+    //position:absolute;
+    //display:block;
+    //border:3px solid grey;
+    //border:1px solid blue;
+    //background:#DDDDDD;
+    //padding:5px;
+    min-height: 500px;
+    margin-top: 5px;
+    //clear: both;
+    
+    
+}
+
+.error
+{
+    font-size: 11px;
+    color:green;
+}
+
+#content td
+{
+    padding:2px;
+}
+#category
+{
+    background-color: grey;
+    box-shadow: 2px 2px 7px white;
+    width:150px;
+    padding: 7px;
+}
+
+#category li
+{
+    list-style-type: none;
+    color:blue;
+    
+}
+
+#category a
+{
+    
+}
+
+#register
+{
+    float:right;
+    //border: 10px solid black;
+    margin-right: 10px;
+   margin-top:7px;
+}
+
+#register td
+{
+    padding-top:3px;
+}
+
+#register input[type='text'], #register input[type='password']
+{
+    font-family: arial;
+    width:280px;
+    height:31px;
+    padding-left: 10px;
+    font-size: 19px;
+    border-radius: 6px;
+    margin-right: 14px;
+   // color:black;
+}
+
+
+#small-profile-pic
+{
+    float:right;
+    margin:2px;
+}
+
+
+#friends-list
+{
+    border:2px solid lightgrey;
+    width:175px;
+    height:73px;
+    padding:5px;
+    margin:3px;
+    display: inline-block;
+    background-color: #fcfcfc;
+    
+}
+
+.ajaxbutton
+{
+   background: url('../../image/loading.gif') 41px 4px no-repeat;
+  
+}
+
+
+#friends-list > span , #friends-list > a 
+{
+    color:rgb(75, 75, 75);
+    font-size: 12.5px;
+    cursor:pointer;
+    //font-weight:bold;
+    
+}
+
+#friends-list #profile-list-email a
+{
+    color:rgb(75, 75, 75);
+}
+
+#friends-list #image 
+{
+    border: 2px solid lightgrey;
+    margin-top: -39px;
+    float: right;
+    top: 0px;
+    margin-right: -99px;
+    width:31px;
+    height: 31px;
+    position: relative;
+    
+}
+
+
+#friends-list #profile-list-email > span
+{
+    font-size:10px;
+    color:grey;
+}
+
+#friends-list button
+{
+    width: 100px;
+    height: 25px;
+    font-size: 11px;
+    line-height: 4px;
+    margin-top: 5px;
+    margin-right: 0px;
+    float: right;
+    color: rgb(86, 114, 165);
+    background-color: #dadada;
+    border: 1px solid lightgray;
+}
+
+#friends-list button:hover
+{
+    background-color: #D0D0D0;
+}
+
+#message-display
+{
+position: fixed;
+top: 0;
+left:0;
+width: 100%;
+height:100%;
+display:none;
+}
+
+#message-display > div
+{
+    background-color: #D5D5D5;
+    margin:auto;
+    top:35%;
+    width:100px;
+    height:100px;
+    position:relative;
+   // border-radius: 1000px;
+    
+}
+
+#message-display > div > div
+{
+    position: absolute;
+    font-size:20px;
+    width:100%;
+    //height:40px;
+    //background-color:red;
+    color:grey;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#newsfeed
+{
+    //overflow: auto;
+    float:left;
+    width:610px;   
+    margin-left: 10px;
+    //background-color: red;
+    
+}
+
+#panel-left
+{
+    //display:block;
+    font-size: 10px;
+    padding:7px;
+    //position: relative;
+    border: 1px solid #CCC;
+    width:130px;
+    height:auto;
+    background-color:rgba(233, 233, 233, 1);
+    float:left;
+    min-height: 350px;
+    
+}
+
+#sidebar
+{
+    border: 2px solid #CCC;
+    
+    position: relative;
+    display: block;
+    padding:7px;
+    //position: relative;
+    width:133px;
+    height:100%;
+    //height:500px;
+    background-color: #E9E9E9;
+    float:right;
+    font-size: 11px;
+    
+}
+
+
+
+#profile-picture
+{
+    position:relative;
+}
+
+#profile-picture-edit
+{
+    z-index: 3;
+    display:none;
+    margin:3px;
+    position:absolute;
+    top:0;
+    left:136px;
+    background-color: rgba(107, 107, 107, 0.29);
+    width:30px;
+    height:30px;
+    cursor: pointer;
+    background: url('../../image/edit.gif')3px 4px no-repeat;;
+}
+
+
+#profile-container
+{
+    position:relative;
+    padding:10px;
+    //border:4px solid #e5e5e5;
+    width:847px;
+    margin:auto;
+    min-height: 450px;
+    
+}
+#profile-header
+{
+    position:relative;
+    background-color: #e5e5e5;
+    padding:10px;
+    border:1px solid #CCC
+}
+
+#profile-header > #user-profile-picture
+{
+    height:160px;
+    width: 160px;
+   // display: table;
+}
+#profile-header > #user-profile-picture >img
+{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+   // vertical-align: middle;
+    margin: auto;
+}
+
+#profile-container > div li
+{
+    margin-right: 10px;
+    list-style-type: none;
+    color:black;
+    float:left;
+    font-size: 14px;
+    color:rgba(31, 104, 213, 1);
+    cursor: pointer;
+    
+}
+#profile-menu
+{
+    //height: 32px;
+   margin:10px;
+   //margin-top: 30px;
+    //border:3px solid black;
+    
+   // padding:10px;
+    
+    
+}
+
+#dashboard-wrapper
+{
+    padding:10px;
+}
+
+#front-text
+{
+    //width:630px;
+    height:auto;
+    //background-color: red;
+    //background-image: url('../../image/slider.png');
+    margin-left: 43px;
+    margin-top: 13px;
+    color:rgba(128, 128, 128, 1);
+}
+
+#profile-page-content
+{
+   padding-top: 4px;
+    margin-top: 10px;
+    min-height:400px;
+    background-color: #e5e5e5;
+    width:100%;
+    border:1px solid #CCC
+}
+
+#search
+{
+    width: auto;
+    background-color: white;
+    overflow: hidden;
+    height: auto;
+    font-size: 11px;
+    z-index: 20;
+    min-width: 180px;
+    
+    
+}
+#btnsearch
+{
+    //height:25px;
+}
+#search a
+{
+    font-size:11px;
+    color:black;
+    display:block;
+    text-align: left;
+    line-height: 24px;
+}
+#search > a > span
+{
+    margin-right: 9px;
+    margin-left: 9px;
+    
+}
+
+#search a:hover
+{
+  cursor: pointer;
+  background-color: rgba(194, 194, 194, 1);
+}
