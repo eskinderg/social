@@ -20,15 +20,16 @@
 #profile-right input[type='text'], #profile input[type='password']
 {
     
-    width:300px;
-    height:25px;
-    padding-left: 5px;
-    font-size: 18px;
+    width:350px;
+    height:34px;
+    padding-left: 8px;
+    font-size: 25px;
+    border-radius: 7px;
 }
 
 #profile-right input[type='text']:focus, #profile input[type='password']:focus
 {
-    border:2px solid grey;
+    border:2px solid rgba(45, 141, 141, 0.74);
 }
 
 #profile-right button
@@ -43,10 +44,10 @@
 {
    // border:2px solid red;
     margin-left: 5px;
-    margin-top: 5px;
-    width:18%;
-    float:left;
-    
+    margin-top: 43px;
+    //width:18%;
+    //float:right;
+    display:inline-block;
 }
 
 #profile-left img
@@ -71,7 +72,7 @@
 #profile-right
 {
     float:left;
-    width:75%;
+    width:486px;
     margin-left: 7px;
    // border:2px solid green;
 }
@@ -110,14 +111,15 @@
     display: none;
     margin:auto;
     //border:2px solid grey;
-    background-color: lightgrey;
+    background-color: #020E12;
     //border-radius: 5px;
     padding:10px;
     width:600px;
     height:325px;
-    box-shadow: 0px 0px 16px rgba(0, 0, 0, 1);
+    border:3px solid rgb(84, 84, 84);
     position:relative;
     margin-top:8%;
+    border-radius: 12px;
 
 }
 
@@ -131,14 +133,15 @@
 #close-icon
 {
     position: absolute;
-    float: right;
-    width:18px;height:16px;
+    //float: right;
+    width:25px;height:25px;
     //background-color: red;
-    right: 5px;
-    top:8px;
-    background: url('../image/close-icon.png') no-repeat 50% 50%;
+    right: 13px;
+    top:12px;
+    background: url('../../image/exit-icon.png') no-repeat 50% 50%;
     cursor: pointer;
     z-index: 6;
+    background-size:contain;
 }
 
 #profile-image-edit-container
@@ -146,7 +149,7 @@
     position: relative;
     width:300px;
     height:250px;
-    border:2px solid grey;
+    //border:2px solid grey;
     margin-bottom: 5px;
 }
 
@@ -159,4 +162,70 @@
     border:1px dotted black;
     cursor: move;
     
+}
+
+
+#profile-picture-edit
+{
+    z-index: 3;
+    display:none;
+    //margin:3px;
+    position:absolute;
+    //top:0;
+    //left:136px;
+   
+    //opacity:0.5;
+    width:100%;
+    height:100%;
+    //cursor: pointer;
+    background: url('../../image/addPhoto.png')19px 19px no-repeat;
+     background-color: rgba(0,0,0 , 0.6);
+}
+
+
+.profilelable
+{
+    text-align: left;
+    padding-top: 12px;
+    padding-bottom: 3px;
+    color:#2D8D8D;
+    font-size: 26px;
+}
+
+#profile-image-edit-container > img
+{
+    position:absolute;
+    margin:auto; 
+    top:0;bottom:0;left:0;right:0;
+    max-height: 100%; max-width:100%;
+}
+
+#profilephotouploadprogress
+{
+    display: none;
+    background-color: rgb(83, 83, 83);
+    height: 34px;
+    width: 484px;
+    //display: none;
+}
+
+#uploadcompletedstatus
+{
+    //position: absolute;
+    display: block;
+    width:100%;
+    height:100%;
+    text-align: center;
+    line-height: 34px;
+    color: rgba(0, 255, 66, 1);
+    display: none;
+}
+
+#progress
+{
+    transition: all 1s ease-in-out;
+    display:block;
+    width:0%;
+    height:100%;
+    background-color: rgb(0, 183, 255);
 }

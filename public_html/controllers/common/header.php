@@ -19,10 +19,11 @@ class header extends controller{
         {
             $this->children=array('common/dash'); // Include Dashboard Menu Items
              
-            $this->data['menus']= array('Home' => 'home','MyDashboard'=>'dashboard',
+            $this->data['menus']= array('Home' => 'home','Dashboard'=>'dashboard',
              'My Docs' => 'docs','Help'=>'help');
             
             $this->data['logout_text']= "<a href=' ".HTTP_SERVER."logout'><img alt = 'Logout' src='../views/image/logout-icon.png'></a>";
+            
         }else
         {
              $this->data['menus']= array('Home' => 'home','Help'=>'help');

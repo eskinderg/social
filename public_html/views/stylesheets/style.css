@@ -1,8 +1,9 @@
 html
 {
-    background:url('../../image/background-body.png');
+    //background:url('../../image/background-body.png');
     overflow-y: scroll;
     height: 100%;
+    background-color: black;
 }
 *
 {
@@ -14,10 +15,13 @@ html
 
 body
 {
-     font-family: Helvetica,Arial,'lucida grande',tahoma,verdana,arial,sans-serif;
+    font-family: 'PT Sans', sans-serif;
+     //font-family: Helvetica,Arial,'lucida grande',tahoma,verdana,arial,sans-serif;
      //background-color: lightgray;  
-     color: rgb(76, 81, 92);
-     width:980px;
+     //color: rgb(76, 81, 92);
+     color:white;
+     //width:980px;
+     width:100%;
      margin: auto;
      height:100%;
 
@@ -28,15 +32,23 @@ body
 
 input[type=button],input[type=submit], button
 {
-    border:1px solid darkgrey;
+    font-family: 'PT Sans', sans-serif;
+    //border:1px solid #BDBDBD;
+    border:none;
     padding:9px;
     cursor: pointer;
-    background-color: lightgrey;
-    
+   // background-color: lightgrey;
+    //background-color: #2D8D8D;
+    background-color: rgba(104, 104, 104, 0.54);
+    color:white;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.7);
+    width: 128px;
+    height: 53px;
+    font-size: 18px;
 }
 input[type=button]:hover,input[type=submit]:hover, button:hover
 {
-    background-color: white;
+    color: rgba(158, 222, 170, 1);
 }
 
 
@@ -45,9 +57,13 @@ input[type=button]:hover,input[type=submit]:hover, button:hover
 
 input[type=password],input[type=text]
 {
-    border:2px solid rgb(208, 210, 219);
+    font-family: 'PT Sans', sans-serif;
+    //border:2px solid rgb(208, 210, 219);
+    border:2px solid rgba(113, 113, 113, 1);
     padding: 4px;
-    color: rgb(103, 132, 141);
+    
+    color:white;
+    background-color: black;
 }
 
 
@@ -65,8 +81,12 @@ h1
 }
 
 #header{
+    
+   // background-color: #2D8D8D;
     width:100%;
-    background-color: rgba(109, 114, 126, 0.64);
+    display:block;
+    width:1100px;
+    margin:auto;
    
     
 }
@@ -74,81 +94,105 @@ h1
 
 #header #main-title
 {
+    display: block;
+    
+    
      color:white;
      margin-left:4px;
+     margin:auto;
+     padding-left:6px;
      
 }
 
 #links
 {
     float:right;
+    
+    
     //line-height: 35px;
-    margin-right: 5px;
-    margin-top:3px;
+    margin-right: 14px;
+    margin-top:9px;
     
 }
 
 #menu
 {
-    width: 980px;
-    background-color: rgba(109, 114, 126, 0.64);
-    height:40px;
-    line-height: 38px;
-   
+    width: 1100px;
+    display:block;
+    margin:auto;
+    background-color: rgba(16, 71, 92, 1);
+    height:60px;
+    line-height: 60px;
+    font-size: 18px;
+    border-top: 4px solid rgb(43, 77, 90);
+    border-bottom: 4px solid rgb(43, 77, 90);
 }
 #menu li
 {
    
     float: left;
-    margin-right: 8px;
-    margin-left: 6px;
+    //margin-right: 8px;
+    //margin-left: 6px;
     list-style-type: none;
    
 }
 
-
-
-#profile_menu
+#menulist
 {
-    //width:980px;
-    position: relative;
-    background-color: rgba(135, 135, 135, 0.36);
-    height:30px;
-    line-height: 30px;
+    //margin-left: 11px;
+    display: block;
 }
 
-#profile_menu li
+#menulist >li
 {
-    
-    //display: block;
-    list-style-type: none;
-    float:left;
-    margin-right: 6px;
-    margin-left: 4px;
+    border-right: 1px solid rgba(128, 128, 128, 0.14);
+    width:109px;
+    text-align: center;
 }
+
+#menulist >li > a
+{
+    transition: all 0.5s ease;
+    display: block;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#menulist >li > a:hover
+{
+    background-color: rgba(128, 128, 128, 0.13);
+    //background: linear-gradient(180deg,rgba(47, 47, 47, 1) 0%, #10475C 100%) repeat scroll 0% 0% transparent;
+}
+
 
 
 #login input[type='text'], #login input[type='password']
 {
+    font-family: 'PT Sans', sans-serif;
     text-align: center;
-    font-family: arial;
     width:230px;
     height:25px;
     padding-left: 7px;
     font-size: 18px;
+    border-radius: 7px;
     
-    
+}
+
+#login table td
+{
+    padding:5px;
 }
 
 
 
 #mainlogin input[type='text'], #mainlogin input[type='password']
 {
-    width:225px;
-    height:23px;
+    width:280px;
+    height:28px;
     padding-left:5px;
-    font-size: 15px;
+    font-size: 18px;
     color:grey;
+    border-radius: 6px;
    
     
 }
@@ -160,18 +204,22 @@ h1
     //border:1px solid black;
 }
 
+#mainlogin td
+{
+    padding-bottom:5px;
+}
+
 
 #footer
 {
     
-    display: block;
-    font-size: 11px;
-    color:grey;
-    height: auto;
-    width:100%;
-    background-color: rgba(128, 128, 128, 0.11);
-    border: 1px solid #CCC;
-    
+display: block;
+font-size: 11px;
+color: #808080;
+height: auto;
+background-color: rgba(0, 0, 0, 1);
+border-top: 1px solid rgba(36, 36, 36, 1);
+margin-top: 20px;
 }
 
 #content
@@ -184,21 +232,34 @@ h1
     //padding:5px;
     min-height: 500px;
     margin-top: 5px;
+    width:980px;
+    margin:auto;
     //clear: both;
     
     
 }
 
-.error
+.sidebar-container
 {
+    border: 2px solid rgba(60, 60, 60, 1);
+    position: relative;
+    display: block;
+    padding:7px;
+    width:133px;
+    height:100%;
+    background-color: rgba(27, 27, 27, 0.54);
+
     font-size: 11px;
-    color:green;
 }
 
-#content td
+.error
 {
-    padding:2px;
+    font-size: 12px;
+    color:#2D8D8D;
+    text-shadow:0px 0px 7px black;
 }
+
+
 #category
 {
     background-color: grey;
@@ -234,11 +295,11 @@ h1
 
 #register input[type='text'], #register input[type='password']
 {
-    font-family: arial;
+    //font-family: arial;
     width:280px;
     height:31px;
     padding-left: 10px;
-    font-size: 19px;
+    font-size: 21px;
     border-radius: 6px;
     margin-right: 14px;
    // color:black;
@@ -254,27 +315,30 @@ h1
 
 #friends-list
 {
-    border:2px solid lightgrey;
-    width:175px;
+    //border:2px solid lightgrey;
+    border: 3px solid rgb(47, 47, 47);
+    width:100%;
+    //width:175px;
     height:73px;
     padding:5px;
     margin:3px;
     display: inline-block;
-    background-color: #fcfcfc;
+    //background-color: #fcfcfc;
     
 }
 
 .ajaxbutton
 {
-   background: url('../../image/loading.gif') 41px 4px no-repeat;
+   background: url('../../image/loading.gif') 93px 17px no-repeat;
   
 }
 
 
+
 #friends-list > span , #friends-list > a 
 {
-    color:rgb(75, 75, 75);
-    font-size: 12.5px;
+    
+    font-size: 15.5px;
     cursor:pointer;
     //font-weight:bold;
     
@@ -282,7 +346,7 @@ h1
 
 #friends-list #profile-list-email a
 {
-    color:rgb(75, 75, 75);
+    color:rgba(255, 255, 255, 1);
 }
 
 #friends-list #image 
@@ -301,7 +365,7 @@ h1
 
 #friends-list #profile-list-email > span
 {
-    font-size:10px;
+    font-size:11px;
     color:grey;
 }
 
@@ -314,14 +378,17 @@ h1
     margin-top: 5px;
     margin-right: 0px;
     float: right;
-    color: rgb(86, 114, 165);
-    background-color: #dadada;
-    border: 1px solid lightgray;
+    color:white;
+    //background-color: rgba(255, 0, 0, 0.62);
+    border: none;
+    box-shadow: none;
+    border-radius: 3px;
 }
 
 #friends-list button:hover
 {
-    background-color: #D0D0D0;
+    //background-color: #D0D0D0;
+    background-color: rgba(194, 194, 194, 0.27);
 }
 
 #message-display
@@ -336,12 +403,13 @@ display:none;
 
 #message-display > div
 {
-    background-color: #D5D5D5;
-    margin:auto;
-    top:35%;
-    width:100px;
-    height:100px;
-    position:relative;
+background-color: #000;
+margin: auto;
+top: 35%;
+width: 100px;
+height: 100px;
+position: relative;
+border: 1px solid rgba(56, 56, 56, 1);
    // border-radius: 1000px;
     
 }
@@ -362,43 +430,13 @@ display:none;
 {
     //overflow: auto;
     float:left;
-    width:610px;   
+    width:572px;   
     margin-left: 10px;
     //background-color: red;
     
 }
 
-#panel-left
-{
-    //display:block;
-    font-size: 10px;
-    padding:7px;
-    //position: relative;
-    border: 1px solid #CCC;
-    width:130px;
-    height:auto;
-    background-color:rgba(233, 233, 233, 1);
-    float:left;
-    min-height: 350px;
-    
-}
 
-#sidebar
-{
-    border: 2px solid #CCC;
-    
-    position: relative;
-    display: block;
-    padding:7px;
-    //position: relative;
-    width:133px;
-    height:100%;
-    //height:500px;
-    background-color: #E9E9E9;
-    float:right;
-    font-size: 11px;
-    
-}
 
 
 
@@ -407,39 +445,19 @@ display:none;
     position:relative;
 }
 
-#profile-picture-edit
-{
-    z-index: 3;
-    display:none;
-    margin:3px;
-    position:absolute;
-    top:0;
-    left:136px;
-    background-color: rgba(107, 107, 107, 0.29);
-    width:30px;
-    height:30px;
-    cursor: pointer;
-    background: url('../../image/edit.gif')3px 4px no-repeat;;
-}
-
 
 #profile-container
 {
     position:relative;
-    padding:10px;
+    //padding:10px;
     //border:4px solid #e5e5e5;
-    width:847px;
+    width:100%;
     margin:auto;
     min-height: 450px;
+    //margin-top: -40px;
     
 }
-#profile-header
-{
-    position:relative;
-    background-color: #e5e5e5;
-    padding:10px;
-    border:1px solid #CCC
-}
+
 
 #profile-header > #user-profile-picture
 {
@@ -456,27 +474,31 @@ display:none;
     margin: auto;
 }
 
-#profile-container > div li
+
+#profile_menu
 {
-    margin-right: 10px;
-    list-style-type: none;
-    color:black;
-    float:left;
-    font-size: 14px;
-    color:rgba(31, 104, 213, 1);
-    cursor: pointer;
-    
+    //margin:auto;
+    //width:980px;
+    position: relative;
+    //background-color: rgba(45, 141, 141, 1);
+    height:30px;
+    width:540px;
+    line-height: 42px;
+    display: block;
+    height:100%;
+    float:right;
+    margin-right: 18px;
 }
-#profile-menu
+
+#user_profile_menu > li
 {
-    //height: 32px;
-   margin:10px;
-   //margin-top: 30px;
-    //border:3px solid black;
     
-   // padding:10px;
-    
-    
+    //display: block;
+    list-style-type: none;
+    float:right;
+    margin-right: 6px;
+    margin-left: 4px;
+    margin-top:15px;
 }
 
 #dashboard-wrapper
@@ -491,18 +513,26 @@ display:none;
     //background-color: red;
     //background-image: url('../../image/slider.png');
     margin-left: 43px;
-    margin-top: 13px;
-    color:rgba(128, 128, 128, 1);
+    //margin-top: 13px;
+    padding:13px;
+    padding-left:0px;
+    color:rgba(231, 231, 231, 1);
+    text-shadow: 0px 0px 3px rgba(83, 83, 83, 1);
 }
 
 #profile-page-content
 {
-   padding-top: 4px;
+   //padding-top: 4px;
     margin-top: 10px;
     min-height:400px;
-    background-color: #e5e5e5;
+    background-color: black;
     width:100%;
-    border:1px solid #CCC
+    border:1px solid #3F3F3F;
+}
+
+#profile-page-menu
+{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.53);
 }
 
 #search
@@ -514,21 +544,63 @@ display:none;
     font-size: 11px;
     z-index: 20;
     min-width: 180px;
+    border:1px solid rgba(65, 65, 65, 0.23);
     
     
 }
+
+
+#messagesearch
+{
+    overflow: hidden;
+    height: auto;
+    font-size: 11px;
+    z-index: 20;
+    min-width: 180px;
+    border: 1px solid rgba(65, 65, 65, 0.23);
+}
+
 #btnsearch
 {
     //height:25px;
 }
+
+
 #search a
 {
-    font-size:11px;
+    font-size: 17px;
+    font-style: italic;
+    color: #FFF;
+    display: block;
+    text-align: left;
+    line-height: 49px;
+    height: 47px;
+    //border-top: 1px solid rgba(128, 128, 128, 0.22);
+}
+
+#search .searchemail
+{
+    color: rgba(122, 118, 118, 1);
+    font-size: 12px;
+    text-align: right;
+    //float: right;
+}
+
+
+
+#messagesearch > span {
+    padding-right: 9px;
+    padding-left: 9px;
+    font-size:14px;
     color:black;
     display:block;
     text-align: left;
     line-height: 24px;
+    border-top: 1px solid rgba(128, 128, 128, 0.22);
 }
+
+
+
 #search > a > span
 {
     margin-right: 9px;
@@ -536,8 +608,67 @@ display:none;
     
 }
 
-#search a:hover
+#search a:hover, #messagesearch span:hover
 {
   cursor: pointer;
-  background-color: rgba(194, 194, 194, 1);
+  background-color: rgb(60, 60, 60);
+}
+
+#registerwrapper
+{
+   // background:url('../../image/b2b social media.jpg');
+   background:url('../../image/background-image.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width:1100px;
+    height:736px;
+    
+    //position:absolute;
+    width:100%;
+    height:100%;
+    
+    background-size: 100% auto;
+    background-attachment: fixed;
+    display: block;
+    margin:auto;
+}
+
+
+#messagetable td
+{
+    //border:1px solid red;
+    padding:5px;
+}
+
+.clspopup
+{
+    list-style-type: none ! important;
+    margin:0px ! important;
+    padding:0px ! important;
+    float:none ! important;
+    height:40px;
+    //border:1px solid black;
+}
+
+
+
+.clspopup  a
+{
+      transition: all 1s ease;
+      color: #FFF;
+      display: block;
+      //font-size: 14px;
+      padding-left: 15px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      height: 40px;
+      line-height: 40px;
+}
+
+.clspopup  a:hover
+{
+    color: rgb(255, 255, 255);
+    background-color: rgb(22, 59, 74);
+    
+    //border:1px solid black;
 }

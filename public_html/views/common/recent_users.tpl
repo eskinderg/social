@@ -1,7 +1,7 @@
 <div id='recent_users' style='width:100px;float: left;margin-top:50px;' >
     
  <?php foreach ($users as $user)
-                {?>
+{?>
 
 
    
@@ -19,7 +19,7 @@
 
 
     <?php 
-    }
+}
 ?>
 
     

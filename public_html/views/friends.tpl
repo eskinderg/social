@@ -1,16 +1,12 @@
 <?php echo $header; ?>
 
 <div id='content'>
-    <h1>Friends Under Construction</h1>
+    <h1></h1>
  <div id='dashboard-wrapper'>
             <?php echo $sidebar; ?>
             
             <!-- <h2>This is your dashboard  </h2>  -->
-
-            <div id='panel-left'>
-                Content to be filled with 
-            </div>
-
+            <?php echo $panelleft; ?>
 
             <div id ='newsfeed'>
                 <?php foreach ($friends as $user)
@@ -33,7 +29,7 @@
 
 
                   <?php 
-                  }
+                }
               ?>
             </div>
                <div style='clear:both;'></div>
@@ -45,4 +41,8 @@
 
     </div>
 </div>
+              
 
+<div id="friendsDetail" style="background-color: white; width:300px; height: 150px; display:none; position:absolute;">
+    
+</div>

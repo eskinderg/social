@@ -7,7 +7,10 @@
         <form action="<?php echo $action; ?>" method="post" >
 
             <table style="margin: auto; padding-top:8%" >
-                <th colspan="3" style='position: absolute;margin-left: 195px; margin-top:-22px;'>Login</th>
+                <tr>
+                    <td></td><td style='text-align: center; font-size: 23px;'>Login</td> <td></td>
+                </tr>
+                
                 <tr>
                     <td>Username</td><td><input type="text" name="username" value = "<?php echo $username; ?>"></td> <td style='width:100px;'><span class='error'> <?php if($login_username_error){echo $login_username_error;} ?> </span></td>
                 </tr>

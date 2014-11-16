@@ -13,11 +13,7 @@
         <?php
             foreach($postdata as $key=>$value)
             {?>
-                <div id='post-list' 
-                    style="color:cadetblue; font-size:13px;background-color:#E9E9E9;margin:3px;
-                    border: 1px solid #CCC;height:60px;">
-                    
-                    
+                <div class='post-list'>    
                     <div style='padding:5px;'> <?php  echo $postdata[$key]['username']; ?> </div>
                     <div style='padding:5px;'> <?php echo $postdata[$key]['post']; ?></div>
                 </div>

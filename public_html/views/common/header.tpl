@@ -4,7 +4,9 @@
         <meta charset="UTF-8">
        
         <title></title>
-        <base href="<?php echo $base;?>">        
+        <base href="<?php echo $base;?>">  
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+        
         <link rel="stylesheet" type="text/css" href="<?php echo HTTP_SERVER;?>views/stylesheets/style.css" />
         
     <?php foreach ($styles as $style) { ?>
@@ -26,13 +28,13 @@
          
         
         <div id="header"> 
-            <div id="main-title"> <h1> <?php echo $header_title; ?> </h1></div>
-             
-            <div id="links"> 
-                <?php
-                    echo $logout_text;
-                ?>
+            <div id="main-title"> 
+                
+                <h1> <?php echo $header_title; ?> </h1>
+            
             </div>
+             
+
             
         
        
@@ -40,26 +42,42 @@
         </div>
       
         
+        
         <div id="menu">
-        <?php 
-         foreach ($menus as $menu => $href) 
-         {
-             echo "<li><a href='/". $href . "'> ". $menu . "</a></li>";
-         }
+            
+            
+        <div id="links"> 
+             <?php
+             echo $logout_text;
+             ?>
+         </div>
+          
+            <?php 
+                if(isset($dash))
+                {
+                  echo "<div id='profile_menu'>" . $dash . "</div>";
+                }
+            ?>
         
-        ?>
-         
+        
+            
+
+        <div id="menulist">  
+            
+            <?php 
+             foreach ($menus as $menu => $href) 
+             {
+                 echo "<li><a href='/". $href . "'> ". $menu . "</a></li>";
+             }
+
+            ?>
         </div>
+    </div>
         
         
-        <?php 
-            if(isset($dash))
-            {
-              echo "<div id='profile_menu'>" . $dash . "</div>";
-            }
-          ?>
+
         
-          <?php 
+          
           
 
           

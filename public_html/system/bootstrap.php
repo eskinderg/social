@@ -29,6 +29,8 @@ private $registry;
                 $this->registry->set('document', new Document());
                 
                 $this->registry->set('user', new user($this->registry));
+                $this->registry->set('userphoto', new userphoto($this->registry));
+                
                 $this->registry->set ('userprofile', new userprofile($this->registry));
                 
                 

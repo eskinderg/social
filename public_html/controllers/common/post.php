@@ -7,9 +7,9 @@ class post extends controller
     {
         
         
-        $postdata= array('post1'=>array('username'=>'User1','post'=>'I am feeling tired'),
-            'post2'=>array('username'=>'Usre2','post'=>'I am feeling string'),
-            'post3'=>array('username'=>'User3','post'=>'Where am I'));
+        $postdata= array('post1'=>array('username'=>'User1','post'=>'Post1'),
+            'post2'=>array('username'=>'Usre2','post'=>'Post2'),
+            'post3'=>array('username'=>'User3','post'=>'Post3'));
         
         
         $this->data['postdata']= $postdata;

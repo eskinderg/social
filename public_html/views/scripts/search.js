@@ -1,10 +1,10 @@
 $(document).ready(function(){
-    
+    /*
     if($('#txtsearch').val().length<=0)
     {
         $('#search').css('display','none'); //hide the search initially
     }
-    
+    */
     $('#btnsearch').click(function(){
                 
         $.ajax({
@@ -25,12 +25,12 @@ $(document).ready(function(){
         else
         {
         
-         $.ajax({
-                dataType: "json",
-                url: '/ajax/ajaxsearch/search/'+ $('#txtsearch').val(),
-                success: success
-                });
-            }
+            $.ajax({
+                   dataType: "json",
+                   url: '/ajax/ajaxsearch/search/'+ $('#txtsearch').val(),
+                   success: success
+                   });
+        }
     });
     
     
@@ -51,6 +51,7 @@ $(document).ready(function(){
                 $("#search").append(
                         "<a href='/"+ data[i].username +"'>\n\
                             <span>" +  data[i].firstname + "&nbsp;" + data[i].lastname + "</span>\n\
+                        <span class='searchemail'>" + data[i].email +"</span>\n\
                         </a> ");
             
             }

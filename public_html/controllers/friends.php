@@ -7,11 +7,12 @@ class friends extends controller
        if(!$this->user->isLogged())
          $this->redirect ('register');
            
+        $this->document->addScript('views/scripts/friends.js');
         
         $this->template = 'friends';
         
-        $this->children = array('common/header','common/footer');
-        
+        $this->children = array('common/header','common/footer','common/panelleft');
+       
         $this->load->model('user');
         $friendslist = $this->model_user->getFriendsList($this->user->getId());
         

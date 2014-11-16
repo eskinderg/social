@@ -1,0 +1,99 @@
+
+#btnloadmore
+{
+    transition: all 0.5s ease;
+    display: block;
+    margin-top:15px;
+    width:582px; 
+    height:40px;
+    line-height:9px;
+    border-radius:9px; 
+    //background:#10475C;
+}
+
+
+#btnloadmore:hover
+{
+    transition: all 0.5s ease;
+    background:  rgba(16, 71, 92, 0.67) ! important;
+}
+
+#newsfeed
+{
+    transition: all 0.5s ease;
+    
+}
+
+
+#loadingdiv
+{
+    transition: all 0.5s ease;
+    display: block;
+    //margin-top:15px;
+    width:100%; 
+    height:87px;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60px;
+    border-radius:9px;
+    //border:1px solid white;
+}
+
+.ajaxloading
+{
+    background-image: url('../../image/ajax-loader.gif');
+}
+
+#friends-list
+{
+    height:130px;
+    padding:0px;
+}
+
+#friends-list #image
+{
+    margin:0px;
+    top:auto;
+    float:left;
+    width:137px;
+    height:100%;
+    border:none;
+}
+
+#friends-list #rightSplit
+{
+    position: relative;
+    width:430px;
+    float:right;
+    //padding:6px;
+    height:100%;
+}
+#friends-list button
+{
+    background-color:rgb(35, 35, 35);
+    position: absolute;
+    right:0px;
+    bottom:0px;
+    width:auto;
+    height: auto;
+    margin:auto;
+    border:none;
+    box-shadow: none;
+    border-radius: 0px;
+    width:200px;
+    height:50px;
+    font-size: 16px;
+    
+}
+
+#friends-list:hover
+{
+    transition: all 0.3s ease-in-out;
+    background-color: #292929;
+}
+
+#friends-list:hover a > span
+{
+     color:rgba(86, 132, 144, 1);
+}

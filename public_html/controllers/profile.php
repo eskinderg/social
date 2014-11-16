@@ -31,9 +31,17 @@ class profile extends controller
         
         if ($this->request->server['REQUEST_METHOD'] == 'POST')
         {
-            $post_data= array('firstname' =>$this->request->post['txt-profile-firstname'] ,
+            $post_data= array(
+                
+                'firstname' =>$this->request->post['txt-profile-firstname'] ,
                 'lastname'=>$this->request->post['txt-profile-lastname'],
-                'email'=> $this->request->post['txt-profile-email']);
+                'email'=> $this->request->post['txt-profile-email'],
+                'address'=> $this->request->post['txt-profile-address'],
+                'occupation'=> $this->request->post['txt-profile-occupation'],
+                'hobby'=> $this->request->post['txt-profile-hobby'],
+                'height'=> $this->request->post['txt-profile-height']
+                    
+                );
            
             if ($this->validate($post_data) && $this->user->isLogged())
             {
@@ -51,6 +59,10 @@ class profile extends controller
         $this->data['sex']= $this->userprofile->get_sex();
         $this->data['about'] = $this->user->getAbout();
         
+        $this->data['address'] = $this->user->getAddress();
+        $this->data['occupation'] = $this->user->getOccupation();
+        $this->data['height'] = $this->user->getHeight();
+        $this->data['hobby'] = $this->user->getHobby();
         
         
          

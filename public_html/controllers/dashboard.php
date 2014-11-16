@@ -1,6 +1,15 @@
 <?php
 
 class dashboard extends controller {
+    public $startitems;
+    public $enditems;
+    
+    function __construct($registry = NULL) {
+        parent::__construct($registry);
+        $this->startitems =0;
+        $this->startitems =12;
+    }
+    
     
     public function index()
     {
@@ -11,6 +20,9 @@ class dashboard extends controller {
             $this->redirect('login');
             
         }
+        
+        $this->document->addScript("../views/scripts/dashboard.js");
+        $this->document->addStyle("../views/stylesheets/dashboard.css");
         
         $this->data['firstname']= $this->user->getFirstname();
         //$this->data['href']= HTTPS_SERVER . 'profilepage/' . $this->user->get_username(); 
@@ -23,7 +35,7 @@ class dashboard extends controller {
         
         $this->load->model('user');
         
-       $users= $this->model_user->getusers();
+       $users= $this->model_user->getlimitedusers(0,21);
         
       // var_dump($users->row);
        

@@ -14,6 +14,14 @@ class user {
         private $about;
 	private $datejoined;
         private $profilepicture;
+        
+        private $occupation;
+        private $height;
+        private $hobby;
+        private $address;
+        
+        
+        
   	public function __construct($registry) {
 		$this->config = $registry->get('config');
 		$this->db = $registry->get('db');
@@ -38,6 +46,13 @@ class user {
 				$this->about = $query_result->row['about'];
                                 $this->datejoined= $query_result->row['time'];
                                 $this->profilepicture = $query_result->row['profilepicture'];
+                                
+                                $this->address = $query_result->row['address'];
+                                $this->occupation= $query_result->row['occupation'];
+                                $this->hobby = $query_result->row['hobby'];
+                                $this->height= $query_result->row['height'];
+                        
+                                
       			//$this->db->query("UPDATE customer SET cart = '" . $this->db->escape(isset($this->session->data['cart']) ? serialize($this->session->data['cart']) : '') . "', wishlist = '" . $this->db->escape(isset($this->session->data['wishlist']) ? serialize($this->session->data['wishlist']) : '') . "', ip = '" . $this->db->escape($this->request->server['REMOTE_ADDR']) . "' WHERE user_id = '" . (int)$this->user_id . "'");
 			
 			//	$query = $this->db->query("SELECT * FROM customer_ip WHERE user_id = '" . (int)$this->session->data['user_id'] . "' AND ip = '" . $this->db->escape($this->request->server['REMOTE_ADDR']) . "'");
@@ -75,6 +90,12 @@ class user {
                         $this->profile_id = $query_result->row['profileid'];
                         $this->about = $query_result->row['about'];
                         $this->profilepicture = $query_result->row['profilepicture'];
+                        
+                        $this->address = $query_result->row['address'];
+                        $this->occupation= $query_result->row['occupation'];
+                        $this->hobby = $query_result->row['hobby'];
+                        $this->height= $query_result->row['height'];
+                        
 			//$this->db->query("UPDATE customer SET ip = '" . $this->db->escape($this->request->server['REMOTE_ADDR']) . "' WHERE user_id = '" . (int)$this->user_id . "'");
 			
 	  		return true;
@@ -167,6 +188,29 @@ class user {
         {
             return $this->profilepicture;
         }
+
+        public function getOccupation()
+        {
+            return $this->occupation;
+        }
+        
+        public function getAddress()
+        {
+            return $this->address;
+        }
+        
+        public function getHobby()
+        {
+            return $this->hobby;
+        }
+        
+        public function getHeight()
+        {
+            return $this->height;
+        }
+
+
+
 
         public function addFriend($friendid)
         {

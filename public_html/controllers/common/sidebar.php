@@ -7,7 +7,11 @@ class sidebar extends controller
        
         $this->template='common/sidebar';
         $this->load->model('user');
-        $this->data['users']= $this->model_user->get_recent_users(100);
+        $this->data['users']= $this->model_user->get_recent_users(10);
+        
+        
+        $this->data['title'] = "Recently Joined Users";
+        
         $this->render();
     }
     

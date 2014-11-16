@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+<div id="registerwrapper">
 <div id="content">
     
     <div id="register">
@@ -64,7 +65,7 @@
                 
     <div id="front-text">
                 <h1>Welcome to the community</h1>
-                <h5>The social networking powered by PHP and designed by esk </h5>
+                <h5>Social networking powered by PHP</h5>
     </div>
                 
     <div id="mainlogin">
@@ -81,7 +82,7 @@
             <tr style="text-align: center;">
                 <td></td><td><button id='btn-mainlogin-login' style='float:left;' type="submit">Login </button></td><td></td>
             </tr>
-            <tr><td></td><td colspan="2" ><span style="color:green" id="label-mainlogin-warning"> <?php if($error_warning){echo $error_warning;} ?> </span></td></tr>
+            <tr><td></td><td colspan="2" ><span class="error" id="label-mainlogin-warning"> <?php if($error_warning){echo $error_warning;} ?> </span></td></tr>
             
            
         </table>
@@ -91,7 +92,7 @@
             <div style="clear: left;"></div>    
             
             
-        
+    </div>     
 </div>
 
 <?php echo $footer; ?>

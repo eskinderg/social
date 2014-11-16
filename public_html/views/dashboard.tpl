@@ -7,38 +7,56 @@
             <h2> Welcome <?php echo ucfirst($firstname);?> </h2>
             <!-- <h2>This is your dashboard  </h2>  -->
 
-            <div id='panel-left'>
-                Content to be filled with 
-            </div>
+            <?php echo $panelleft; ?>
 
 
             <div id ='newsfeed'>
                 <?php foreach ($users as $user)
                 { ?>
+                
+                
 
-
-                   <div id="friends-list">
-
-                       <a href ="<?php echo HTTPS_SERVER . $user['username']; ?>"> <span alt = "<?php echo $user['UserId'] ?>"><?php echo ucfirst($user['firstname']) . ' ' . ucfirst($user['lastname']); ?> </span></a>
-                       <div id='profile-list-email'><span><a href='#'><?php echo $user['email']; ?></a></span></div>
-                       <button href="<?php echo $user['username']; ?>" alt = "<?php echo $user['UserId'] ?>" id='btn-addfriend'><?php echo $user['txt_button']; ?></button>
+                <div id="friends-list">
                        
-                       <div id="image">
+                        <div id="image">
                            <img style='max-width: 100%;max-height: 100%;position: absolute;margin: auto;
                                 top:0;bottom:0;right:0;left:0;' 
                                 src="<?php echo $user['profilepicture']; ?>">
-                       
-                       </div>
-                       
-                       <div><img style='margin-top: 12px;' src="../image/mail.png"></div>
-                   </div>
+
+                        </div>
+
+                        <div id='rightSplit'>
+                           <div style='clear: both;'></div>
+                           <a href ="<?php echo HTTPS_SERVER . $user['username']; ?>"> <span alt = "<?php echo $user['UserId'] ?>" style="font-size: 23px;"><?php echo ucfirst($user['firstname']) . ' ' . ucfirst($user['lastname']); ?> </span></a>
+                           <div id='profile-list-email'><span><a href='#'><?php echo $user['email']; ?></a></span></div>
+                           <button href="<?php echo $user['username']; ?>" alt = "<?php echo $user['UserId'] ?>" id='btn-addfriend'><?php echo $user['txt_button']; ?></button>
 
 
-                  <?php 
+
+                           <div><img style='margin-top: 12px;' src="../image/mail.png"></div>
+
+                        </div>
+
+                       
+                       
+                 </div>
+
+
+                <?php 
                   }
               ?>
+                <div id='btnclear' style='clear:both;'></div>
+               
+             <!-- <button id="btnloadmore"> Load More </button>  -->
+             
+             <div id='loadingdiv'></div>
+             
             </div>
+                          
                <div style='clear:both;'></div>
+               
+               
+               
             <div id='message-display'>
                 <div>
                     <div></div>

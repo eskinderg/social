@@ -14,8 +14,8 @@ class ajaxsearch extends controller
         
         
       
-        $query_result = $this->db->query("SELECT * FROM user WHERE firstname LIKE '%".$text."%' or "
-                . "lastname LIKE '%".$text."%'");
+        $query_result = $this->db->query("SELECT * FROM user WHERE firstname LIKE '%$text%' or 
+                lastname LIKE '%$text%' ORDER BY firstname LIMIT 10");
         $json = array();
         
         
@@ -35,4 +35,3 @@ class ajaxsearch extends controller
    }
 }
    
-   ?>

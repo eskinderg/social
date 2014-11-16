@@ -1,0 +1,421 @@
+.lstimages
+{
+    position: relative;
+    display: inline-block;
+    width:200px;
+    height: 270px;
+    //border:1px solid white;
+    background:rgb(17, 17, 17);
+    margin:10px;
+    overflow:hidden;
+}
+
+.lstimages > img
+{
+    position:relative;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.lstimages > img:hover
+{
+    cursor: pointer;
+}
+
+.deletephoto
+{
+    transition: all 0.2s ease-in-out;
+    position:absolute;
+    width:0px;
+    height:0px;
+    top:0px;
+    right:0px;
+    background-color:white;
+    border-bottom-left-radius: 51px;
+    display:none;
+}
+
+#rightcontrols
+{
+    
+    width:100px;
+    height:100%;
+    position: absolute;
+    top:0px;
+    right:0px;
+    background-color: rgba(83, 83, 83, 0.37);
+    z-index: 2;
+    border-bottom-right-radius: 20px;
+}
+
+#rightcontrols > div
+{
+    transition: all 0.5s ease-in-out;
+    height:100px;
+    width:100%;
+    border-bottom: 1px solid rgba(90, 90, 90, 1);
+    background-size: contain ! important;
+    background-repeat: no-repeat ! important;
+}
+
+
+#rightcontrols > div:hover
+{
+    background-color: rgba(74, 74, 74, 1);
+    cursor:pointer;
+}
+
+
+
+#rightcontrols #likepicture
+{    
+    background: url('../../image/heart.png');  
+}
+
+#rightcontrols #sharepicture
+{    
+    background: url('../../image/share.png');  
+}
+
+#rightcontrols #deletepicture
+{    
+    background: url('../../image/delete.png');  
+}
+
+
+#loadingicon
+{
+   // position:absolute;
+   // width:200px;
+   // height:200px;
+    
+  // background-repeat: no-repeat;
+    //background: url('../../image/photo-loading.gif');
+   // background-size: contain;
+}
+
+
+#btnupload
+{
+    
+    background: url("../../image/btnupload.png") no-repeat;
+    background-repeat: no-repeat;
+    //background-attachment: fixed;
+    //background-position: center center; 
+    width: 60px;
+    height: 60px;
+    //position: absolute;
+    //right:0px;
+    background-size: 60px 60px;
+    float:left;
+}
+
+#divleft
+{
+    position: relative;
+    width:100%;
+    display: block;
+    height:70px;
+    
+}
+
+#phototitle
+{
+    float:right;
+}
+
+.controls
+{
+    transition: all 0.75s ease-in-out;
+    position:absolute;
+    width:100%;
+    height:0px;
+    opacity:0;
+    
+    bottom:0px;
+    
+}
+
+.lstimages:hover>.controls
+{
+    transition: all 0.5s ease;
+    background-color: #FFF;
+    opacity:0.5;
+    height:70px;
+    display: block ! important;
+}
+
+
+
+
+
+#picture-viewer-wrapper
+{
+    display:none;
+    position:relative;
+    top:0px;
+    left:0px;
+    position:fixed;
+    width:100%;
+    height:100%;
+    //background:black;
+    overflow: hidden;
+    //background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.79);
+}
+
+#picturevieweroverlay
+{
+    display:none;
+    position:relative;
+    top:0px;
+    left:0px;
+    position:fixed;
+    width:100%;
+    height:100%;
+    //background:black;
+    overflow: hidden;
+    background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.61);
+}
+
+
+#pictureviewer
+{
+    position:relative;
+    width:75%;
+    height: 85%;
+    margin:auto;
+    top: 50%;
+    transform: translateY(-50%);
+    min-height: 450px;
+
+    //background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.79);
+}
+
+#picture
+{
+    height:100%;
+    //width:500px;
+    display: block;
+    margin: auto;
+    background-color: rgb(26, 26, 26);
+    //border: 3px solid rgb(39, 39, 39);
+    border-radius:20px;
+    
+}
+#picture> #pictureframe > img
+{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+    position: relative;
+}
+
+
+#pictureframe
+{
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+
+#closeImage
+{
+    position: absolute;
+    //float:right;
+    width:50px;
+    height:50px;
+    right: -20px;
+    top:-20px;
+    background: url('../../image/close-icon.png');
+    background-size: 50px 50px;
+    cursor:pointer;
+    z-index: 3;
+}
+
+
+.likebtn
+{
+    width: 50px;
+    height: 50px;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+    left:2px;
+    position: relative;
+    background:url('../../image/like.png');
+    background-size:contain;
+    curson:pointer;
+}
+
+.likedbtn
+{
+    width: 50px;
+    height: 50px;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+    left:2px;
+    position: relative;
+    background:url('../../image/liked.png');
+    background-size:contain;
+    cursor:pointer;
+}
+
+.likebtn:hover
+{
+    cursor:pointer;
+}
+
+.photoNavigation
+{
+    display:block;
+    position:absolute;
+    width:100px;
+    height:100%;
+    
+    //background-color: grey;
+}
+
+#navigate-left
+{
+    left:40px
+        
+}
+
+#navigate-right
+{
+    right:40px;
+}
+
+.navigationImage
+{
+    transition: all 0.25s ease-in-out;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    background-size: contain ! important;
+}
+
+#PhotoUploadProgress
+{
+    position:relative;
+    margin:auto;
+    display:block;
+    background-color: rgb(108, 108, 108);
+    width:500px;
+    height:50px;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+#progressFormWrapper
+{
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    position:fixed;
+    //background-color:brown;
+    display: none;
+}
+
+#ProgressForm
+{
+    position: relative;
+    width: 600px;
+    height: 300px;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #10475C;
+    border: 3px solid rgb(78, 78, 78);
+}
+
+#progress
+{
+    position: relative;
+    display:block;
+    height: 100%;
+    width:0%;
+    background:rgb(0, 255, 12);
+    
+}
+
+#deleteconfirm
+{
+    position: relative;
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(2, 14, 18, 1);
+    //border: 3px solid #4E4E4E;
+    border:3px solid #050505;
+    box-shadow: 4px 4px 5px #000;
+}
+
+
+#deleteconfirmwrapper
+{
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    display:none;
+    
+}
+.confirmbtn
+{
+    display: inline-block;
+    margin: auto;
+    width:100px;
+    height: 50px;
+    border: 1px solid red;
+    text-align: center;
+    line-height: 50px;
+    font-size: 22px;
+    border: 2px solid #1B1A1A;
+    cursor:pointer;
+}
+
+#deleteconfirmbuttonwrapper
+{
+   margin-top:100px;
+}
+
+#deletebuttons
+{
+    width:250px;
+    display:block;
+    margin:auto;
+    text-align: center;
+}
+
+#deleteconfirmwrapper > #deleteyes
+{
+    
+}
+
+#deleteconfirmwrapper > #deleteno
+{
+    
+}

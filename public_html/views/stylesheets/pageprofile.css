@@ -1,0 +1,72 @@
+
+
+.tabdetail
+{
+    //border:1px solid black;
+    //position:absolute;
+    background-color:black;
+    //padding:9px;
+    //width:100%;
+    padding:10px;
+    min-height:400px;
+    display:none;
+}
+
+.tooggleClassHide
+{
+    //visibility:hidden;
+    display:none ! important;
+}
+
+
+.tooggleClassShow
+{
+    display: block ! important;
+}
+
+
+
+
+#profile-page-menu > li
+{
+    
+    list-style-type: none;
+    color:black;
+    float:left;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#profile-page-menu > li> a:hover
+{
+    background-color:rgba(68, 68, 68, 1) ! important;
+    color:rgba(243, 243, 243, 1);
+}
+
+#profile-page-menu > li > a
+{
+    color:white;
+    display:block;
+    padding:10px;
+}
+
+
+.tablelable
+{
+    
+}
+
+.tablerow
+{
+    font-weight: bold;
+}
+
+#profile-header
+{
+    position:relative;
+    background-color: black;
+    //padding:10px;
+    border: 1px solid #323232;
+    width:980px;
+    margin:auto;
+}

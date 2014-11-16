@@ -1,0 +1,45 @@
+#messagetop
+{
+    height:30px;
+    display: block;
+    width:100%;
+}
+
+#messagebar
+{
+    float:right; 
+    //background-color:red;
+    display:block;
+    //height:30px;
+    width:300px;
+}
+
+#messagebar li
+{
+    
+    display:block;
+    padding:5px;
+    list-style: none;
+    float:right;
+}
+
+#messageLeftPanel
+{
+    min-height: 500px;
+    //border:2px solid grey;
+}
+
+#messageLeftPanel > ul > li
+{
+    cursor: pointer;
+    padding-left:4px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    border-top: 1px solid rgba(0, 0, 0, 0.21);
+    list-style: none;
+    display: block;
+}
+#messageLeftPanel > ul > li:hover
+{
+    background-color: rgba(194, 194, 194, 0.27);
+}

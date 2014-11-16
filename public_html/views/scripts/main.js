@@ -31,10 +31,15 @@ $(document).ready(function(){
     });
     
     
+    
+
+    
+    
     /* ajax call for adding friends -------------------------------------------------*/
     
-    $(':button').click(function(e){
-        
+    //$(':button').click(function(e){
+    
+    $(document).on('click',':button',function(e){ //rebinding the element to the click event
         var button = $(e.target);
         
         if($(this).attr('alt'))

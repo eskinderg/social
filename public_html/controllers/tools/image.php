@@ -21,7 +21,9 @@ class image extends Model
                               // unique file path
                               $path = $path . $this->user->getId() . '.' .$ext;
                               
-                                // move uploaded file from temp to uploads directory
+                              
+                              
+                              // move uploaded file from temp to uploads directory
                               if (move_uploaded_file($_FILES['image']['tmp_name'], $path))
                               {
                                 //$status = 'Image successfully uploaded!';
@@ -29,8 +31,6 @@ class image extends Model
                                   $this->db->query("UPDATE user
                                             SET profilepicture='" .$path. "'
                                            WHERE UserId='" . $this->user->getId(). "';");
-                                  
-                                  
                                  
                               }
                               else {
@@ -48,9 +48,22 @@ class image extends Model
             else {
               $status = 'Bad request!';
             }
-            echo $path;
+            echo "<img src=$path" . "?timestamp=" . rand(1, 1000). ">" ;
    }
 
+   public function addtoPictureAlbum($ext,$tempFile)
+   {
+       $folder = 'image/uploads/photos/';
+       $path = $folder . "image_" .date('Y-m-d-H-i-s') . '_' . uniqid(). '.' .$ext;
+       
+       move_uploaded_file($tempFile, $path);
+       
+       $this->db->query( "INSERT INTO picture ".
+                         "(userid,filepath)".                     
+                         "VALUES('".$this->user->getId()."','".$path."');");
+       
+   }
+   
    public function add()
    {
        //echo'method called';

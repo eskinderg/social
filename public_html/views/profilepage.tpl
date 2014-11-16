@@ -1,12 +1,10 @@
 <?php echo $header; ?>
 
 <div id='content'>
-    <div id='profile-container'>
-        
         <div id='profile-header'>
             <div id='user-profile-picture' 
-                 style=" border: 2px solid rgba(215, 215, 215, 1); 
-                 display: inline-block;
+                 style="  
+                 display: inline-block; margin:auto;vertical-align: middle;
                  position: relative;
                  background-repeat: no-repeat;
                  background-size: contain;
@@ -24,15 +22,16 @@
 
             <button id='' onclick="return false;" 
                     style="position: absolute; bottom:0; right:0; 
-                    box-shadow: 0px 0px 4px #F0F0F0; margin-right: 10px;margin-bottom: 10px;
-                    background-color: #EBEBEB; border:none;border: 1px solid #CCC;">
+                    margin-right: 10px;margin-bottom: 10px;
+                    border:none;border: 1px solid #565656;">
                 <?php echo $button_text; ?></button>
         </div>
+    
+  <div id='profile-container'>
         
-        
-     <div id='profile-page-content'>   
-       
-        <div id='profile-menu'>
+    <div id='profile-page-content'>   
+         
+        <div id='profile-page-menu'>
             <?php
                    foreach ($profile_menu as $key => $value)
                    {
@@ -41,19 +40,60 @@
                         
                         echo "<li><a href= $href>" .$text . "</a></li>";
                    }
-               ?>
+            ?>
             
                
-            
-            <div id="datejoined" style="position: absolute;bottom:15px; left:16px; font-size:10px; color:#1F68D5">
-                <?php
-                    echo 'Joined ' . $profile_datejoined;
-                ?>
-            </div>
+
             <div style='clear: both;'></div>
         </div>
-         
-         <div id='profile-friends' style="padding:10px;width:805px;margin:auto;">
+     
+     
+        <div id="tab-profile" class="tabdetail">
+            
+            <table style="width:450px; font-size: 14px;">
+                <!--
+                <tr>
+                    <td class="tablelable">Username</td>   <td class="tablerow"><?php echo $profile_username; ?></td>
+                </tr>
+                -->
+                <tr>
+                    <td class="tablelable">First Name</td> <td class="tablerow"><?php echo $profile_firstname; ?></td>
+                </tr>
+                
+                <tr>
+                    <td class="tablelable">Last Name</td>  <td class="tablerow"><?php echo $profile_lastname; ?></td>
+                </tr>
+                
+                <tr>
+                    <td class="tablelable">E-Mail</td>     <td class="tablerow"><?php echo $profile_email; ?></td>
+                </tr>
+                
+                <tr>
+                    <td class="tablelable">Address</td>    <td class="tablerow"><?php echo $profile_address; ?></td>
+                </tr>
+                
+                <tr>
+                    <td class="tablelable">Occupation</td>     <td class="tablerow"><?php echo $profile_occupation; ?></td>
+                </tr>
+                
+                <tr>
+                    <td class="tablelable">Hobby</td>    <td class="tablerow"><?php echo $profile_hobby; ?></td>
+                </tr>
+                
+                <tr>
+                    <td class="tablelable">Height</td>    <td class="tablerow"><?php echo $profile_height; ?></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="tab-photos" class="tabdetail">
+            info info info
+        </div>
+            
+
+        <div id="tab-friends" class="tabdetail" style="display:block;">
+            
+            <div id='profile-friends' style="padding:10px;margin:auto;">
              
                    <?php
                    //var_dump($friends);
@@ -74,6 +114,20 @@
                     <?php }?>
                    
                </div>
+        </div>
+
+        <div id="tab-timeline" class="tabdetail">
+            Timeline
+        </div>
+        
+        <div id="tab-location" class="tabdetail">
+        
+        </div>
+    
+    
+        
+         
+         
          
          <!--
                 <?php foreach ($friends as $friend)
@@ -99,8 +153,18 @@
          -->
          
         <div style="clear:both;"></div>
-     </div>
         
+                    
+
+     </div>
+                    
+    <div style="clear:both;display:block;"></div>
+    <div id="datejoined" style="bottom:0px; display:block; font-size:10px; color:#1F68D5; clear:both;padding:5px;">
+        <?php
+            echo 'Joined ' . $profile_datejoined;
+        ?>
+    </div>
+        <div style="clear:both;display:block;"></div>
  </div>
   
 </div>

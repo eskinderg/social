@@ -19,7 +19,9 @@
     require_once DIR_SYSTEM . 'db.php';
     
     require_once DIR_LIBRARY . 'user.php';
+    require_once DIR_LIBRARY . 'userphoto.php';
     require_once DIR_LIBRARY . 'userprofile.php';
+    require_once DIR_LIBRARY . 'SimpleImage.php';
     
     require_once DIR_LIBRARY . 'document.php';
     require_once DIR_LIBRARY . 'mail.php';

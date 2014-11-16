@@ -10,7 +10,8 @@ class pageprofile extends controller{
         
         $this->template='profilepage';
         $this->children = array('common/header','common/footer');
-        
+        $this->document->addScript('views/scripts/pageprofile.js');
+        $this->document->addStyle('views/stylesheets/pageprofile.css');
         $this->load->model('pageprofile');
         
         $profile = $this->model_pageprofile->getprofile($pageID);
@@ -23,7 +24,11 @@ class pageprofile extends controller{
         $this->data['profile_firstname']= $profile[0]['firstname'];
         $this->data['profile_lastname']= $profile[0]['lastname'];
         $this->data['profile_email']= $profile[0]['email'];
-        
+        $this->data['profile_address']= $profile[0]['address'];
+        $this->data['profile_about']= $profile[0]['about'];
+        $this->data['profile_occupation']= $profile[0]['occupation'];
+        $this->data['profile_hobby']= $profile[0]['hobby'];
+        $this->data['profile_height']= $profile[0]['height'];
         
         if($profile[0]['profilepicture'])
         {
@@ -43,9 +48,10 @@ class pageprofile extends controller{
         
         $this->data['profile_menu']= array(
             'Profile'=>array('href'=>$this->data['profile_username'].'/profile','title'=>'Profile'),
-            'Info'=>array('href'=>$this->data['profile_username'].'/info','title'=>'Info'),
+            'Info'=>array('href'=>$this->data['profile_username'].'/photos','title'=>'Photos'),
             'Friends'=>array('href'=>$this->data['profile_username'].'/friends','title'=>'Friends'),
-            'Timeline'=>array('href'=>$this->data['profile_username'].'/timeline','title'=>'Timeline')
+            'Timeline'=>array('href'=>$this->data['profile_username'].'/timeline','title'=>'Timeline'),
+            'Location'=>array('href'=>$this->data['profile_username'].'/location','title'=>'Location')
             );
         
         

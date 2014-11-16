@@ -1,6 +1,6 @@
-<div id='sidebar'>
-    <h3 style="border-bottom: 1px solid #CCC; padding:3px;margin:3px;">
-        Recent Users
+<div id='sidebar' class="sidebar-container" style="float:right;">
+    <h3 style="border-bottom: 1px solid #CCC; padding:3px;margin:3px; font-size: 9px;">
+        <?php echo $title; ?>
     </h3>
        
         <?php foreach ($users as $user)

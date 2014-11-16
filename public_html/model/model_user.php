@@ -43,14 +43,21 @@ class model_user extends Model
 	return $query->rows;
     }
     
+    public function getlimitedusers($start=0, $end)
+    {
+        $query = $this->db->query("SELECT * FROM user LIMIT $start , $end");
+		
+	return $query->rows;
+    }
+    
     public function updateuser($data = array())
     {
         if(isset($data))
         {
             extract($data);
             $this->db->query("UPDATE user
-                             SET firstname='" .$firstname. "', lastname='". $lastname . "',email='" . $email ."'
-                            WHERE UserId='" . $UserId . "';");
+                             SET firstname='$firstname', lastname='$lastname', email='$email', hobby='$hobby', occupation='$occupation', address='$address', height='$height'
+                            WHERE UserId='$UserId';");
             
             
         }
@@ -59,7 +66,8 @@ class model_user extends Model
     public function get_recent_users($limit)
     {
                 $query = $this->db->query("SELECT * "
-                        . "FROM user"
+                        . "FROM user "
+                        . "ORDER BY time DESC"
                         . " LIMIT ". $limit);
 		
 	return $query->rows;
