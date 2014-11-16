@@ -35,6 +35,7 @@ class login extends controller
         $this->data['username']= $this->request->post['username'];
        
         $this->data['action']= 'login';
+        $this->data['register'] = HTTPS_SERVER . 'register';
         $this->template='login';
         $this->data['login_title']='This is footer Title';
         $this->children = array('common/header','common/footer');

@@ -17,8 +17,9 @@
                 <tr>
                     <td>Password</td>   <td><input type="password" name="password"></td><td><span class='error'> <?php if($login_password_error){echo $login_password_error;} ?></span></td>
                 </tr>
-                <tr style="text-align: center;"><td colspan="3"><button type="submit" style='margin-left:-20px;width:120px;'>Login</button></td></tr>
+                <tr style="text-align: center;"><td colspan="3"><button type="submit" style='width:120px;'>Login</button></td></tr>
                 <tr><td colspan="3"  style='text-align: center;'><span class="error"> <?php if($error_warning){echo $error_warning;} ?> </span></td></tr>
+                <tr><td colspan="3"  style='text-align: center; '><a style='color: rgba(30, 179, 185, 1);' href="<?php echo $register; ?>">Sign Up</a> </td></tr>
             </table>
 
 

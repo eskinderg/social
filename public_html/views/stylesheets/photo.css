@@ -19,6 +19,8 @@
     margin: auto;
     top: 50%;
     transform: translateY(-50%);
+    -ms-transform: translateY(-50%); /* IE 9 */
+    -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
 
 }
 
@@ -191,6 +193,8 @@
     margin:auto;
     top: 50%;
     transform: translateY(-50%);
+     -ms-transform: translateY(-50%); /* IE 9 */
+    -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
     min-height: 450px;
 
     //background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.79);
@@ -214,6 +218,8 @@
     display: block;
     top: 50%;
     transform: translateY(-50%);
+     -ms-transform: translateY(-50%); /* IE 9 */
+    -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
     margin: auto;
     position: relative;
 }
@@ -248,12 +254,14 @@
     display: block;
     top: 50%;
     transform: translateY(-50%);
+     -ms-transform: translateY(-50%); /* IE 9 */
+    -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
     margin: auto;
     left:2px;
     position: relative;
     background:url('../../image/like.png');
     background-size:contain;
-    curson:pointer;
+    cursor:pointer;
 }
 
 .likedbtn
@@ -263,6 +271,8 @@
     display: block;
     top: 50%;
     transform: translateY(-50%);
+     -ms-transform: translateY(-50%); /* IE 9 */
+    -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
     margin: auto;
     left:2px;
     position: relative;
@@ -306,6 +316,8 @@
     display: block;
     top: 50%;
     transform: translateY(-50%);
+     -ms-transform: translateY(-50%); /* IE 9 */
+    -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
     margin: auto;
     position: relative;
     z-index: 1;
@@ -322,6 +334,8 @@
     height:50px;
     top: 50%;
     transform: translateY(-50%);
+     -ms-transform: translateY(-50%); /* IE 9 */
+    -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
 
 }
 
@@ -344,6 +358,8 @@
     margin: auto;
     top: 50%;
     transform: translateY(-50%);
+     -ms-transform: translateY(-50%); /* IE 9 */
+    -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
     background-color: #10475C;
     border: 3px solid rgb(78, 78, 78);
 }
@@ -366,6 +382,8 @@
     margin: auto;
     top: 50%;
     transform: translateY(-50%);
+     -ms-transform: translateY(-50%); /* IE 9 */
+    -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
     background-color: rgba(2, 14, 18, 1);
     //border: 3px solid #4E4E4E;
     border:3px solid #050505;

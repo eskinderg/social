@@ -6,8 +6,7 @@ $(document).ready(function(){
     
     pageload();
    
-   
-   
+
     $("#btnupload").click(function(e){
         
         $("#fileupload").click();
@@ -93,10 +92,6 @@ $("#closeImage").click(function(){
    
 });
 
-$("#picturevieweroverlay").click(function(){
-    
-        closePictureViewer();
-});
 
 function closePictureViewer()
 {
@@ -170,6 +165,8 @@ function loadImg(data)
      
      adjustNavigationControlls();
 }
+
+
 
    
 $('#navigate-left > .navigationImage').click(function(e){
@@ -257,11 +254,7 @@ function adjustNavigationControlls()
         //alert('Rightchanged');
         rightctrl.css('background','url(../../image/next-icon-grey.png)');
     }
-
-
-    
-
-    
+   
   
 }
 
@@ -437,5 +430,29 @@ function adjustNavigationControlls()
     $('#deleteno').click(function(){
        $(deleteconfirmwrapper).css('display','none'); 
     });
+    
+    $('#deleteyes').click(function(){
+    
+        var pictureid = $("#pictureviewer > #picture > #pictureframe > img").attr('alt');
+        
+        
+        $.ajax({
+        dataType: "json",
+        url: '/ajax/likephoto/deletePhoto/' + pictureid,
+            success: function(data){
+                console.log(data);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status);
+                alert(thrownError);
+            }
+        });
+    
+       $(deleteconfirmwrapper).css('display','none');  
+       
+    
+    });
+    
+ 
     
 });
